@@ -1,3 +1,6 @@
+import React from "react"
+import PokeCard from "./Pokecard"
+import './PokeList.css'
 const Pokelist = [
     {id: 4, name: 'Charmander', type: 'fire', base_experience: 62},
     {id: 7, name: 'Squirtle', type: 'water', base_experience: 63},
@@ -10,4 +13,21 @@ const Pokelist = [
   ]
 
 
-  export default Pokelist
+function Pokedex(props){
+return (
+<div className="Pokedex">
+<div className="Pokedex-cards">
+     {Pokelist.map(pokemon =>
+     
+        <PokeCard
+    id = {pokemon.id}
+    name = {pokemon.name}
+    type = {pokemon.type}
+    xp = {pokemon.base_experience}
+    image = {`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id}.png.`}/>
+    )} 
+</div>
+    </div>
+)
+}
+  export default Pokedex

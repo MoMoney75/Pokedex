@@ -1,16 +1,22 @@
 import React from 'react';
 import './App.css';
-import Pokelist from './PokeList';
+import Pokedex from './PokeList';
+import PokeCard from './Pokecard';
 
 function App() {
   return (
+
+
     <div>
-<PokeCard  
-id={4} 
+<h1>Pokedex:</h1>
+<Pokedex />    
+
+<h1>PokeCard:</h1>
+<PokeCard 
+id = {4}
 name = "Charmander" 
 type = "fire" 
-base_experience = {100}
-image = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png."
+xp = {100}
 
 />
     </div>
